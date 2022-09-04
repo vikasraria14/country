@@ -49,7 +49,7 @@ const App = () => {
     console.log(country);
     return (
       <div className="Container country text-white">
-        
+       
         <Country
           key={country.name}
           country={country}
@@ -60,15 +60,21 @@ const App = () => {
     );
   } else {
     return (
-      <div className="text-white bg-grey mb-3">
-      <div className="Container main center">
-        <div >
-          <span className="big">Search Countries:</span> <input value={search} onChange={findCountries} /><br/><br/>
+      <div className="text-white bg-grey mb-3 center">
+        <div className="header center">
+       
+          <h5 className="center">Where in the world</h5>
+        
+      </div>
+      <div className="searchCountry">
+          <span className="big">Search Countries:</span> <input value={search} placeholder="Search a country ...." className="searchField text-whites" onChange={findCountries} /><br/><br/>
         </div>
-        <Row xs={2} md={4} className="g-4">
+      <div className="Container main center wid1">
+        
+        <Row sm={1} md={4} className="g-4 wid1 c">
         {countriesToShow.map((country) => (
-          <Col key={country.name}>
-          <Card className="text-white bg-blac mb-3 " style={{ width: "18rem" } }>
+          <Col key={country.name} className='wid2'>
+          <Card className="text-white bg-blac mb-3 " style={{ width: "100%" } }>
             <Card.Img variant="top" src={country.flags.png} width="550" height="200" border='1px solid black'/>
             <Card.Body >
               <Card.Title className='center'>{country.name}</Card.Title>

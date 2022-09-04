@@ -25,7 +25,7 @@ const Weather=({country})=>
     return (
         <>
            
-            <h3>Weather in {country.capital}</h3>
+            <h4>Weather in {country.capital}</h4>
             <p>temperature {(weatherData.main.temp-273.15).toPrecision(3)} Celcius</p>
             <img src={url1} alt='Weather icon' />
             <p>wind {weatherData.wind.speed} m/s</p>
